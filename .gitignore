@@ -1,0 +1,34 @@
+# --- Secrets: OAuth client and tokens (never commit) ---
+client_secret*.json
+token*.json
+*.token
+*.pem
+.env
+.env.*
+# Local preferences (see youtube_mcp/config.py)
+*.env
+
+# --- Local runtime data (upload history, logs) ---
+data/
+*.sqlite3
+*.sqlite3-journal
+*.db
+*.log
+
+# --- Python ---
+.venv/
+.venv-*/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+build/
+dist/
+
+# --- macOS / editors ---
+.DS_Store
+.idea/
+.vscode/

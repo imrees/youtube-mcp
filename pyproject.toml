@@ -1,0 +1,32 @@
+[project]
+name = "youtube-mcp"
+version = "1.0.0"
+description = "A free, local-first MCP server for AI-powered YouTube management, with an optional macOS utility for instant unlisted video sharing."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+dependencies = [
+    "mcp==2.3.0",
+    "google-api-python-client==2.202.0",
+    "google-auth==2.63.1",
+    "google-auth-oauthlib==1.5.0",
+    "google-auth-httplib2==0.4.4",
+]
+
+[project.optional-dependencies]
+dev = ["pytest==9.2.0"]
+
+[project.scripts]
+youtube-mcp = "youtube_mcp.server:main"
+youtube-mcp-authorize = "youtube_mcp.authorize:main"
+
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["youtube_mcp"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
